@@ -2,7 +2,7 @@ import React from "react"
 
 import styles from "../../styles/Header.module.css"
 import { Link } from "react-router-dom";
-import { Routes } from "../../utils/routes";
+import { ROUTES } from "../../utils/routes";
 import logo from "../../images/logo.svg"
 import avatar from "../../images/avatar.jpg"
 
@@ -10,7 +10,7 @@ const Header = (props) => {
     return (
         <div className={styles.header}>
             <div className={styles.logo}>
-                <Link to={Routes.HOME}>
+                <Link to={ROUTES.HOME}>
                     <img src={logo} alt="Stuff" />
                 </Link>
             </div>
@@ -41,13 +41,13 @@ const Header = (props) => {
                 </form>
 
                 <div className={styles.account}>
-                    <Link to={Routes.HOME} className={styles.favourites}>
+                    <Link to={ROUTES.HOME} className={styles.favourites}>
                         <svg className={styles["icon-fav"]}>
                             <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#heart`} />
                         </svg>
                     </Link>
 
-                    <Link to={Routes.CART} className={styles.cart}>
+                    <Link to={ROUTES.CART} className={styles.cart}>
                         <svg className={styles["icon-cart"]}>
                             <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
                         </svg>
